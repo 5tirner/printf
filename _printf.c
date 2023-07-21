@@ -30,6 +30,15 @@ int	_printf(const char *format, ...)
 				len += s_handle(va_arg(p, char *));
 			else if (format[i] == '%')
 				len += write(1, "%", 1);
+			else if (format[i] == 'd')
+				len += d_handle(va_arg(p, int));
+			else if (format[i] == 'i')
+				len += i_handle(va_arg(p, int));
+			else
+			{
+				len += write(1, "%", 1);
+				len += write(1, &format[i], 1);
+			}
 		}
 		else
 			len += write(1, &format[i], 1);

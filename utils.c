@@ -17,7 +17,7 @@ int	c_handle(int c)
  * s_handle - take care of %s
  * @s: strings to write it
  *
- * Return: Lenght of the string
+ * Return: Len of the string
  */
 
 int	s_handle(char *s)
@@ -33,4 +33,50 @@ int	s_handle(char *s)
 		i++;
 	}
 	return (i);
+}
+
+/**
+ * d_handle - take care of %d
+ * @d: decimal number
+ *
+ * Return: Len of d
+ */
+
+int	d_handle(int d)
+{
+	int	len;
+
+	len = 0;
+	put_nbr(d);
+	if (d <= 0)
+		len++;
+	while (d != 0)
+	{
+		len++;
+		d /= 10;
+	}
+	return (len);
+}
+
+/**
+ * i_handle - take care of %i
+ * @i: number to print
+ *
+ * Return: Len of i
+ */
+
+int	i_handle(int i)
+{
+	int	len;
+
+	len = 0;
+	put_nbr(i);
+	if (i <= 0)
+		len++;
+	while (i != 0)
+	{
+		len++;
+		i /= 10;
+	}
+	return (len);
 }
