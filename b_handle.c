@@ -22,17 +22,16 @@ int	b_handle(unsigned int u)
 	{
 		if (u >= table)
 		{
-			write(1, "1", 1);
+			len += write(1, "1", 1);
 			u -= table;
 			r = 1;
 		}
 		else
 		{
 			if (r == 1)
-				write(1, "0", 1);
+				len += write(1, "0", 1);
 		}
 		table /= 2;
-		len++;
 	}
 	return (len);
 }
