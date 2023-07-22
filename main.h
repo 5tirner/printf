@@ -4,6 +4,7 @@
 # include <stdlib.h>
 # include <stdarg.h>
 # include <unistd.h>
+# include <stdio.h>
 
 int	_printf(const char *format, ...);
 int	c_handle(int c);
@@ -12,5 +13,6 @@ int	d_handle(int d);
 int	i_handle(int i);
 void	put_nbr(int d);
 void	put_char(char c);
+int	b_handle(unsigned int u);
 
 #endif
