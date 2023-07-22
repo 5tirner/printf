@@ -36,6 +36,8 @@ int	_printf(const char *format, ...)
 				len += i_handle(va_arg(p, int));
 			else if (format[i] == 'b')
 				len += b_handle(va_arg(p, unsigned int));
+			else if (format[i] == 'r')
+				len += r_handle(va_arg(p, char *));
 			else
 			{
 				len += write(1, "%", 1);
