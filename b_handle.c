@@ -17,7 +17,7 @@ int	b_handle(unsigned int u)
 	len = 0;
 	r = 0;
 	if (u == 0)
-		len++;
+		len += write(1, "0", 1);
 	while (table != 0)
 	{
 		if (u >= table)
