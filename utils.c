@@ -57,26 +57,3 @@ int	d_handle(int d)
 	}
 	return (len);
 }
-
-/**
- * i_handle - take care of %i
- * @i: number to print
- *
- * Return: Len of i
- */
-
-int	i_handle(int i)
-{
-	int	len;
-
-	len = 0;
-	put_nbr(i);
-	if (i <= 0)
-		len++;
-	while (i != 0)
-	{
-		len++;
-		i /= 10;
-	}
-	return (len);
-}
