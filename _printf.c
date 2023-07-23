@@ -43,9 +43,7 @@ int	_printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			if (!format[i])
-				break;
-			else if (format[i] == 'c')
+			if (format[i] == 'c')
 				len += c_handle(va_arg(p, int));
 			else if (format[i] == '%')
 				len += write(1, "%", 1);
@@ -55,6 +53,11 @@ int	_printf(const char *format, ...)
 				len += b_handle(va_arg(p, unsigned int));
 			else if	(format[i] == 'R' || format[i] == 's' || format[i] == 'r')
 				len += for_norm(va_arg(p, char *), format[i]);
+			else
+			{
+				len += write(1, "%", 1);
+				len += write(1, &format[i], 1);
+			}
 		}
 		else
 			len += write(1, &format[i], 1);
