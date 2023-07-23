@@ -57,3 +57,26 @@ int	d_handle(int d)
 	}
 	return (len);
 }
+
+/**
+ * u_handle - take care of %u
+ * @u: unsigned integer
+ *
+ * Return: len of u
+ */
+
+int	u_handle(unsigned int u)
+{
+	int	len;
+
+	len = 0;
+	put_unbr(u);
+	if (u == 0)
+		len++;
+	while (u != 0)
+	{
+		len++;
+		u /= 10;
+	}
+	return (len);
+}

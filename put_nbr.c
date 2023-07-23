@@ -36,3 +36,21 @@ void	put_nbr(int d)
 		put_nbr(d % 10);
 	}
 }
+
+/**
+ * put_unbr - print unsigned int
+ * @u: number o print it
+ *
+ * Return: nothing
+ */
+
+void    put_unbr(unsigned int u)
+{
+	if (u <= 9)
+		put_char(u + 48);
+	else
+	{
+		put_nbr(u / 10);
+		put_nbr(u % 10);
+	}
+}

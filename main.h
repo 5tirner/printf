@@ -16,5 +16,7 @@ int	b_handle(unsigned int u);
 int	r_handle(char *s);
 int	rot_13(char *s);
 int	for_norm(char *s, char c);
+int	u_handle(unsigned int u);
+void	put_unbr(unsigned int u);
 
 #endif
