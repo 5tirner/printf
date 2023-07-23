@@ -43,7 +43,9 @@ int	_printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			if (format[i] == 'c')
+			if (format[i] == '\0')
+				break;
+			else if (format[i] == 'c')
 				len += c_handle(va_arg(p, int));
 			else if (format[i] == '%')
 				len += write(1, "%", 1);
