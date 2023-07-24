@@ -57,6 +57,8 @@ int	_printf(const char *format, ...)
 				len += for_norm(va_arg(p, char *), format[i]);
 			else if (format[i] == 'u')
 				len += u_handle(va_arg(p, unsigned int));
+			else if (format[i] == 'x' || format[i] == 'X')
+				len += xX_handle(va_arg(p, unsigned int), format[i]);
 			else
 			{
 				len += write(1, "%", 1);
@@ -67,6 +69,5 @@ int	_printf(const char *format, ...)
 			len += write(1, &format[i], 1);
 		i++;
 	}
-	va_end(p);
 	return (len);
 }

@@ -18,5 +18,7 @@ int	rot_13(char *s);
 int	for_norm(char *s, char c);
 int	u_handle(unsigned int u);
 void	put_unbr(unsigned int u);
+void	put_hexa(unsigned int d, char c);
+int	xX_handle(unsigned int d, char c);
 
 #endif
