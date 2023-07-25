@@ -45,7 +45,7 @@ int	xX_handle(unsigned int d, char c)
 	while (d != 0)
 	{
 		len++;
-		d /= 10;
+		d /= 16;
 	}
 	return (len);
 }
