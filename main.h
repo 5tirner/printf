@@ -20,5 +20,6 @@ int	u_handle(unsigned int u);
 void	put_unbr(unsigned int u);
 void	put_hexa(unsigned int d, char c);
 int	xX_handle(unsigned int d, char c);
+int	p_handle(unsigned int p);
 
 #endif
